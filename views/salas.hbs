@@ -1,0 +1,44 @@
+<h1 class="text-center">Holis soy el chat</h1>
+
+<div class="container">
+
+    <h1 class="text-center">Soy el formulario de sala</h1>
+
+    <div class="formulario__contenedor">
+        
+
+        <form  action="/salas" class="formulario" method="post">
+        <label>Nombre sala: </label>
+        <input type="text" name="titulo" placeholder="Nombre sala">
+        <label>Nombre autor: </label>
+        <input type="text" name="autor" placeholder="Nombre autor">
+        <label>Nombre imagen: </label>
+        <input type="text" name="imagen" placeholder="Nombre de la imagen">
+        <input type="submit" value="Enviar sala">
+    </form>
+    </div>
+    
+
+
+    <div class="mt-5">
+        <h2 class="text-center mb-3">Salas disponibles</h2>
+        {{#if salas}}
+
+        <div class="row gap-4 justify-content-center">
+            {{#each salas as |sala|}}
+                <div class="col-4 card d-flex">
+                    <img src="/img/{{imagen}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-black">
+                        <h5 class="card-title text-center">{{sala.titulo}}</h5>
+                        <h5 class="card-title">{{sala.autor}}</h5>
+                        <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Unirse</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+
+</div>

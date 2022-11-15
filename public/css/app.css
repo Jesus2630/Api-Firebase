@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #232323;
+    color: #ffffff;
+}
+
+.formulario__contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario{
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.formulario label{
+    text-align: center;
+}
